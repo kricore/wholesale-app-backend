@@ -1,0 +1,71 @@
+// ------------------------------------------------------------------------------
+// SECTION: VARIABLES
+// -----------------------------------------------------------------------------*/
+
+/* GRID
+---------------------------------------------------------------------------------------------------*/
+
+
+/* FONTS
+---------------------------------------------------------------------------------------------------*/
+$light:       300;
+$normal:      400;
+$semi_bold:   600;
+$bold:        700;
+
+$main_font: 'Roboto', sans-serif;
+
+
+
+// Coloring
+// ----------------------------------------------------------------------*/
+
+$green:          #84A18F;
+$black:          #4A4E59;
+$white:          #ffffff;
+$grey:           #F0F3F2;
+
+$base_font_color: $green;
+
+
+$color_palettes:
+  ( 'black', $black ),
+  ( 'green', $green ),
+  ( 'grey', $grey ),
+  ( 'white', $white );
+
+@each $color_palette in $color_palettes {
+  $id: nth($color_palette, 1);
+  $color: nth($color_palette, 2);
+
+
+  .bg_#{$id} {
+    background-color: $color !important;
+  }
+
+  .color_#{$id} {
+    color: $color !important;
+  }
+
+  .paragraph.color_#{$id} {
+    color: $color !important;;
+  }
+
+
+}
+
+$fonts:
+  ('light', $light ),
+  ( 'normal', $normal ),
+  ('semi_bold', $semi_bold ),
+  ( 'bold', $bold );
+
+@each $font in $fonts {
+  $id: nth($font, 1);
+  $font-weight: nth($font, 2);
+
+
+  .font_weight_#{$id} {
+   font-weight: $font-weight;
+  }
+}

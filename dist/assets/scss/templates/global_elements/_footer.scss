@@ -1,0 +1,13 @@
+.site_footer{
+    padding: 40px 0;
+
+    .back_to_top_container{
+        margin-top: 30px;
+        align-self: flex-end;
+
+        @media screen and (min-width:em( 769 ) ){
+            text-align: right;
+            margin-top: 0;
+        }
+    }
+}

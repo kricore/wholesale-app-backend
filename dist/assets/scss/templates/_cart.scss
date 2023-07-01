@@ -1,0 +1,86 @@
+.main_cart{
+    .cart_items{
+        margin-bottom: 150px;
+
+        .cart_item{
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid $green;
+
+            &:last-of-type{
+                padding-bottom: 0;
+                border-bottom: none;
+            }
+
+            .product__image{
+                align-items: center;
+                margin-bottom: 12px;
+                height: 100%;
+
+                @media screen and (min-width: em( 769 ) ){
+                    margin-bottom: 0;
+                }
+            }
+         
+            .product__title{
+                margin-bottom: 14px;
+
+                @media screen and (max-width: em(768)) {
+                    margin-bottom: 22px;
+                }
+            }
+
+            .product__info{
+                position: relative;
+                min-height: 180px;
+            }
+
+            .product__summary,
+            .quantity{
+                @media screen and (max-width: em(768)) {
+                    margin-bottom: 20px;
+                }
+            }
+
+
+            .remove_from_cart{
+                align-self: flex-end;
+
+                @media screen and (max-width: em(768)) {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                }
+
+                .btn{
+                    border: none;
+                    padding: 0;
+                    background-color: transparent;
+                    color: $green;
+
+                    &:hover{
+                        background-color: inherit;
+                        color: inherit;
+                    }
+                }
+            }
+        }
+    }
+
+    .cart_totals{
+        text-align: center;
+
+        .cart__subtotal{
+            margin-bottom: 90px;
+
+            @media screen and (min-width: em(769)) {
+                margin-bottom: 50px;
+            }
+        }
+
+        .cart__finalize_order .button{
+            width: 100%;
+            max-width: 450px;
+        }
+    }
+}

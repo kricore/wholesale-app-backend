@@ -1,0 +1,69 @@
+// ------------------------------------------------------------------------------
+// SECTION: MIXINS
+// -----------------------------------------------------------------------------*/
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+      -moz-border-radius: $radius;
+        -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+
+@mixin appearance($appearance) {
+    -webkit-appearance: $appearance;
+      -moz-appearance: $appearance;
+}
+
+@mixin transition($transition) {
+    -webkit-transition: $transition;
+      -moz-transition: $transition;
+    transition: $transition;
+}
+
+@mixin animation($animation) {
+  -webkit-animation: $animation;
+    -moz-animation: $animation;
+      -o-animation: $animation;
+        -ms-animation: $animation;
+  animation: $animation;
+}
+
+
+@mixin box-shadow($box-shadow) {
+  -webkit-box-shadow: $box-shadow;
+    -moz-box-shadow: $box-shadow;
+      -o-box-shadow: $box-shadow;
+        -ms-box-shadow: $box-shadow;
+  box-shadow: $box-shadow;
+}
+
+@mixin blur($blur) {
+  -webkit-filter: blur($blur);
+    -moz-filter: blur($blur);
+      -o-filter: blur($blur);
+        -ms-filter: blur($blur);
+  filter: blur($blur);
+}
+
+
+@mixin transition( $transition ){
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  -ms-transition: $transition;
+  transition: $transition;
+}
+
+@mixin transform( $transform ){
+  -webkit-transform: $transform;
+  -moz-transform: $transform;
+  -o-transform: $transform;
+  -ms-transform: $transform;
+  transform: $transform;
+}
+
+@mixin background-size( $size ){
+  -webkit-background-size: $size;
+  -moz-background-size: $size;
+  background-size: $size;
+}

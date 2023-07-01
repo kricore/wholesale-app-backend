@@ -1,0 +1,110 @@
+body{
+  @extend .m_font;
+}
+
+
+
+.page_title,
+.section_title {
+  @extend .xl_font;
+}
+
+@mixin button_font {
+  @extend .m_font;
+}
+
+
+@mixin button_small_font{
+  @extend .s_font;
+}
+
+
+.paragraph {
+  @extend .m_font;
+
+  p,
+  li,
+  a {
+    font-size: inherit;
+    line-height: inherit;
+  }
+
+  p {
+    margin: 0 0 20px 0;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+}
+
+.s_font{
+    font-size: 12px;
+    line-height: 14px;
+
+    @media screen and (min-width: em(1680)) {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    @media screen and (min-width: em(1920)) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+}
+
+.m_font {
+  font-size: 16px;
+  line-height: 20px;
+
+  @media screen and (min-width: em(1680)) {
+  }
+
+  @media screen and (min-width: em(1920)) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+
+.l_font {
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: $bold;
+
+  @media screen and (min-width: em(1680)) {
+  }
+
+  @media screen and (min-width: em(1920)) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.xl_font {
+  font-size: 25px;
+  line-height: 24px;
+  font-weight: $semi_bold;
+
+  @media screen and (min-width: em(1680)) {
+  }
+
+  @media screen and (min-width: em(1920)) {
+    font-size: 28px;
+    line-height: 27px;
+  }
+}
+
+
+.error_msg {
+    @extend .s_font;
+}

@@ -1,0 +1,16 @@
+.main_login{
+
+    .login_container{
+        position: relative;
+
+        > .wrapper{
+            height: calc( 100vh - 122px );
+        }
+
+        .col{
+            max-width: 400px;
+        }
+
+    
+    }
+}

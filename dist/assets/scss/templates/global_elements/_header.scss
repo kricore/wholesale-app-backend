@@ -1,0 +1,138 @@
+.site_header{
+    padding: 22px 0;
+    border-bottom: 1px solid $green;
+
+    &.fixed{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 153px;
+        background-color: $white;
+        z-index: 9;
+
+        @media screen and (min-width:em(601)) {
+            height: 109px;
+        }
+    }
+
+    .site_header__logo{
+        width: 270px;
+        max-width: 100%;
+        margin: 0 auto;
+
+        > a{
+            display: block;
+        }
+
+        @media screen and ( min-width:em( 1920 ) ){
+            width: 350px;
+        }
+    }
+
+    .social_media{
+        margin: 0;
+        padding: 0;
+
+        li{
+            list-style-type: none;
+            display: inline-block;
+            margin-right: 10px;
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+
+            > a{
+                display: block;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 24px 24px;
+                width: 24px;
+                height: 24px;
+
+                // @media screen and (min-with:em(600)) {
+
+                // }
+
+                @media screen and ( min-width:em( 601 ) ){
+                    width: 20px;
+                    height: 20px;
+                    background-size: 20px 20px;
+                }
+
+                @media screen and (min-width:em( 1920 ) ){
+                    width: 28px;
+                    height: 28px;
+                    background-size: 28px 28px;
+                }
+            }
+
+
+            &.facebook > a{
+                background-image: url( '../../../img/icons/icon_facebook.svg' );
+            }
+
+            &.instagram > a{
+                background-image: url('../../../img/icons/icon_instagram.svg');
+            }
+        }
+    }
+
+    .site_header__cart{
+        position: relative;
+        display: inline-block;
+
+        .total_cart_items{
+            position: absolute;
+            top: -18px;
+            right: -18px;
+            padding: 6px;
+            @include border-radius( 50% );
+            background-color: $green;
+            width: 25px;
+            height: 25px;
+            color: $white;
+            text-align: center;
+
+            &.three_digits{
+                line-height: 20px;
+                height: 32px;
+                width: 32px;
+            }
+
+            @media screen and ( min-width: em(1920 ) ){
+                width: 30px;
+                height: 30px;
+
+                &.three_digits {
+                    line-height: 23px;
+                    height: 34px;
+                    width: 35px;
+                    top: -22px;
+                    right: -22px;
+                }
+            }
+
+        }
+    }
+}
+
+
+@media screen and ( max-width: em( 600 ) ){
+    .site_header{
+        .site_header__logo_container{
+            order: 1;
+            flex: 0 0 100%;
+            margin-top: 10px;
+        }
+
+        .site_header__cart{
+            .total_cart_items{
+                display: none;
+            }
+        }
+
+    }
+}

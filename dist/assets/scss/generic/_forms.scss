@@ -1,0 +1,28 @@
+
+.form_row{
+    margin-bottom: 24px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+label{
+    display: block;
+    margin-bottom: 6px;
+}
+
+input{
+    padding: 10px 12px;
+    display: block;
+    width: 100%;;
+
+    &:focus{
+        outline: none;
+    }
+}
+
+.error_msg{
+    margin-top: 6px;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+}

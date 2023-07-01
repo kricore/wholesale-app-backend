@@ -1,0 +1,23 @@
+{
+    "name": "Simita-wholesale",
+    "version": "1.0.0",
+    "description": "The wholesale app",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "@shopify/shopify-api": "^6.2.0",
+        "bcrypt": "^5.1.0",
+        "body-parser": "^1.19.0",
+        "cors": "^2.8.5",
+        "dotenv": "^16.0.3",
+        "ejs": "^3.1.9",
+        "express": "^4.17.1",
+        "install": "^0.13.0",
+        "jsonwebtoken": "^9.0.0",
+        "mongoose": "^6.2.2",
+        "nodemailer": "^6.9.1",
+        "npm": "^9.6.3"
+    }
+}

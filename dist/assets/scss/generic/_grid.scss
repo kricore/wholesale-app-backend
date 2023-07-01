@@ -1,0 +1,254 @@
+.flex_container{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+
+  &.flex_center{
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &.flex_end {
+    justify-content:flex-end;
+  }
+
+  &.row{
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  &.reverse{
+    [class^="col-"]:nth-child(1){
+      order: 2;
+    }
+  }
+
+  &.reverse_desktop{
+    @media screen and (min-width:em( 1024 )){
+      [class^="col-"]:nth-child(1) {
+          order: 2;
+      }
+    }
+  }
+
+.col,
+[class^="col-"]{
+    padding-left: 15px;
+    padding-right: 15px;
+    // align-items: left;
+
+    &.align-right {
+        margin-left: auto;
+      }
+    
+    &.vertical_center {
+      margin: auto;
+    }
+
+    &.align-bottom{
+      align-self: flex-end;
+    }
+
+  }
+
+  .col {
+    flex: 1 0 0;
+  }
+
+  .col-2 {
+    flex: 0 0 auto;
+    width: 16.666666%;
+  }
+
+  .col-3 {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+
+  .col-4 {
+    flex: 0 0 auto;
+    width: 33.33333333%;
+  }
+  
+
+  .col-5{
+    flex: 1 1 41.66666%;
+    width: 41.66666%;
+  }
+
+  .col-6 {
+    flex: 1 1 50%;
+    width: 50%;
+  }
+
+  .col-7 {
+    flex: 1 1 58.333333%;
+    width: 58.333333%;
+  }
+
+   .col-9 {
+      flex: 1 1 75%;
+      width: 75%;
+  }
+
+  .col-12{
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  .col-lg-3 {
+    @media screen and (min-width: em(1100)){
+      flex: 0 0 25% !important;
+      width: 25% !important;
+    }
+
+  }
+
+  .col-md-4 {
+    @media screen and (min-width: em(769)) and (max-width: em(1023)) {
+      flex: 0 0 33.3333333% !important;
+      width: 33.3333333% !important;
+    }
+
+  }
+
+  .col-sm-12{
+    @media screen and ( max-width: em( 768 ) ){
+      flex: 1 1 100% !important;
+      width: 100% !important;
+    }
+
+  }
+
+  .col-sm-6 {
+      @media screen and (max-width: em(768)) {
+        flex: 1 1 50% !important;
+        width: 50% !important;
+      }
+  
+    }
+
+    .col-xs-12 {
+      @media screen and (max-width: em(479)) {
+        flex: 1 1 100% !important;
+        width: 100% !important;
+      }
+  
+    }
+}
+
+.flex_container{
+  .offset_1_left{
+    @media screen and (min-width: em(1024)) {
+      padding-left: 8.3%;
+    }
+  }
+
+  .offset_1_right {
+    @media screen and (min-width: em(1024)) {
+      padding-right: 8.3%;
+    }
+  }
+}
+
+
+
+@mixin global_wrapper{
+  // padding: 0 20px;
+  max-width: 1760px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  
+  // &.fullwidth{
+  //   max-width: 100%;
+  //   padding-left: 0;
+  //   padding-right: 0;
+  // }
+
+  @media screen and ( min-width: em( 480 ) ){
+    padding: 0 15px;
+  }
+
+  @media screen and ( min-width: em( 600 ) ){
+    padding: 0 35px;
+  }
+
+  @media screen and ( min-width: em( 768 ) ){
+    padding: 0 40px;
+  }
+
+  @media screen and ( min-width: em( 992 ) ){
+    padding: 0 50px;
+  }
+
+  @media screen and ( min-width: em( 1024 ) ){
+    padding: 0 50px;
+  }
+
+  @media screen and ( min-width: em( 1280 ) ){
+    padding: 0 60px;
+  }
+
+  @media screen and ( min-width: em( 1440 ) ){
+    padding: 0 70px;
+  }
+
+  @media screen and ( min-width: em( 1920 ) ){
+    padding: 0;
+  }
+
+  > .inner {
+      padding-left: 15px;
+      padding-right: 15px;
+
+    @media screen and (min-width: em(480)) {
+        padding-left: 35px;
+        padding-right: 35px;
+      }
+    
+      @media screen and (min-width: em(600)) {
+        padding-left: 35px;
+        padding-right: 35px;
+      }
+    
+      @media screen and (min-width: em(768)) {
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+    
+      @media screen and (min-width: em(992)) {
+        padding-left: 50px;
+        padding-right: 50px;
+      }
+
+      @media screen and (min-width: em(1024)) {
+        padding-left: 20px;
+        padding-right: 20px;
+      }  
+
+      @media screen and (min-width: em(1280)) {
+        padding-left:40px;
+        padding-right: 40px;
+      }
+
+      @media screen and (min-width: em(1440)) {
+        padding-left: 60px;
+        padding-right: 60px;
+      }
+
+      @media screen and (min-width: em(1680)) {
+        padding-left: 80px;
+        padding-right: 80px;
+      }
+  }
+
+}
+
+.wrapper{
+  @include global_wrapper;
+}
+

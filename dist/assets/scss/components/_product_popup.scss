@@ -1,0 +1,95 @@
+.product__popup{
+    position: fixed;
+    right: 0;
+    // top: 109px;
+    top: 0;
+    z-index: 9;
+    background-color: $green;
+    color: $white;
+    width: 100%;
+    // height: calc( 100vh - 109px );
+    height: 100%;
+    padding: 80px 25px;
+    overflow-y: scroll;
+    @include transform( translateX( 100% ) );
+    @include transition( all 180ms ease-in-out );
+
+    @media screen and (min-width: em(769)) {
+        max-width: 530px;
+    }
+
+    &.opened{
+        @include transform(translateX( 0 ) );
+    }
+
+
+    .popup__close{
+        position: absolute;
+        top: 30px;
+        right: 36px;
+        background: none;
+        background-image: url( '../../img/icons/icon_close.svg' );
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 20px 20px;
+        width: 30px;
+        height: 30px;
+        border: none;
+        padding: 0;
+    }
+
+    .product__variation{
+        margin-bottom: 60px;
+
+        @media screen and (min-width: em(769)) {
+            margin-bottom: 40px;
+        }
+
+        .variation__title{
+            margin-bottom: 14px;
+        }
+        
+        .variation__main{
+            .variation__image{
+                flex: 0 0 100%;
+                margin-bottom: 20px;
+                padding: 12px 0;
+            
+                @media screen and ( min-width: em( 769 ) ){
+                    flex: 0 0 120px;
+                    margin-right: 15px;
+                    margin-bottom: 0;
+                }
+            }
+
+            .variation__summary{
+                flex: 1 0 0;
+
+                .variation__desc{
+                    margin-bottom: 10px;
+                }
+
+                .quantity{
+                    text-align: right;
+                    margin-top: auto;
+
+                    .quantity__label {
+                        display: inline-block;
+                        margin-right: 8px;
+                        vertical-align: middle;
+                    }
+                }
+
+            }
+
+        }
+
+        .add_to_cart {
+            display: block;
+            width: 100%;
+            margin-top: 20px;
+        }
+    }
+
+}
+
